@@ -10,10 +10,10 @@
     <tag>round</tag>
   </resource>
 
-  <resource identifier="gimp-brush-clipboard-image" checksum="1d2987e4de39d7bfa4c385d5d62a6a7b">
+  <resource identifier="gimp-brush-clipboard-image" checksum="157dcef48665ab465439cfaf10d6feeb">
   </resource>
 
-  <resource identifier="gimp-brush-clipboard-mask" checksum="7cdd6a86cd7a4498a17260ef64b462d6">
+  <resource identifier="gimp-brush-clipboard-mask" checksum="157dcef48665ab465439cfaf10d6feeb">
   </resource>
 
   <resource identifier="${gimp_data_dir}/brushes/Basic/1-pixel.vbr" checksum="b22c1fec1056f979b1d17e4cc80e9112">
@@ -772,7 +772,7 @@
   <resource identifier="${mypaint_brushes_dir}/ramon/wet_round.myb" checksum="038abfe33947692f773e0244d2ac7fc1">
   </resource>
 
-  <resource identifier="gimp-pattern-clipboard-image" checksum="5546ad4edd57f8e42fe6a0dabbfe0c68">
+  <resource identifier="gimp-pattern-clipboard-image" checksum="eff9598f9f61c1dc78d842f1798c2ab8">
   </resource>
 
   <resource identifier="${gimp_data_dir}/patterns/Legacy/3dgreen.pat" checksum="00052731f14a5bc614daece969b368bc">
@@ -1177,7 +1177,7 @@
   <resource identifier="${gimp_data_dir}/gradients/Yellow_Orange.ggr" checksum="428584726006e23e260baa2a7d79f295">
   </resource>
 
-  <resource identifier="gimp-palette-color-history" checksum="ff39f2c02c02031d525dcc7b3c9a733f">
+  <resource identifier="gimp-palette-color-history" checksum="91f519ef4786eafa354a9f8eb666d6fd">
   </resource>
 
   <resource identifier="${gimp_data_dir}/palettes/Bears.gpl" checksum="e82e818c20ac12bdd21049924ea2d1e7">
@@ -1301,6 +1301,18 @@
   </resource>
 
   <resource identifier="${gimp_data_dir}/palettes/Web.gpl" checksum="f02e8dfa23d01d6acfbab7f895c2dd16">
+  </resource>
+
+  <resource identifier="Baekmuk Batang" checksum="(null)">
+  </resource>
+
+  <resource identifier="Baekmuk Dotum" checksum="(null)">
+  </resource>
+
+  <resource identifier="Baekmuk Gulim" checksum="(null)">
+  </resource>
+
+  <resource identifier="Baekmuk Headline" checksum="(null)">
   </resource>
 
   <resource identifier="C059" checksum="(null)">
@@ -1822,6 +1834,9 @@
   <resource identifier="Noto Sans Javanese" checksum="(null)">
   </resource>
 
+  <resource identifier="Noto Sans Javanese Bold" checksum="(null)">
+  </resource>
+
   <resource identifier="Noto Sans Kaithi" checksum="(null)">
   </resource>
 
@@ -1901,6 +1916,9 @@
   </resource>
 
   <resource identifier="Noto Sans Khmer UI Thin" checksum="(null)">
+  </resource>
+
+  <resource identifier="Noto Sans Khojki" checksum="(null)">
   </resource>
 
   <resource identifier="Noto Sans Khudawadi" checksum="(null)">
@@ -2015,6 +2033,9 @@
   </resource>
 
   <resource identifier="Noto Sans Marchen" checksum="(null)">
+  </resource>
+
+  <resource identifier="Noto Sans Math" checksum="(null)">
   </resource>
 
   <resource identifier="Noto Sans Medium" checksum="(null)">
@@ -2263,19 +2284,10 @@
   <resource identifier="Noto Sans Syriac" checksum="(null)">
   </resource>
 
-  <resource identifier="Noto Sans Syriac Eastern" checksum="(null)">
-  </resource>
-
-  <resource identifier="Noto Sans Syriac Estrangela" checksum="(null)">
-  </resource>
-
   <resource identifier="Noto Sans Syriac Heavy" checksum="(null)">
   </resource>
 
   <resource identifier="Noto Sans Syriac Thin" checksum="(null)">
-  </resource>
-
-  <resource identifier="Noto Sans Syriac Western" checksum="(null)">
   </resource>
 
   <resource identifier="Noto Sans Tagalog" checksum="(null)">
@@ -2348,6 +2360,18 @@
   </resource>
 
   <resource identifier="Noto Sans Thaana Bold" checksum="(null)">
+  </resource>
+
+  <resource identifier="Noto Sans Thaana Heavy" checksum="(null)">
+  </resource>
+
+  <resource identifier="Noto Sans Thaana Light" checksum="(null)">
+  </resource>
+
+  <resource identifier="Noto Sans Thaana Medium" checksum="(null)">
+  </resource>
+
+  <resource identifier="Noto Sans Thaana Thin" checksum="(null)">
   </resource>
 
   <resource identifier="Noto Sans Thai" checksum="(null)">
