@@ -87,7 +87,6 @@ endif
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " MISC KEY MAPS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-let mapleader = ","
 map <leader>y "*y
 map <leader>a Othisisshit<ESC>
 " Move around splits with <c-hjkl>
