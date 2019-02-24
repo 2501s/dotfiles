@@ -203,7 +203,7 @@ bindsym XF86AudioNext exec playerctl next
 bindsym XF86AudioPrev exec playerctl previous
 
 # Border / titlebar
-new_window pixel 10
+default_border pixel 10
 
 # bindsym Control+Shift+x [class="^.*"] border toggle
 #for_window[class=terminal] border normal
@@ -222,6 +222,7 @@ set $bar-background-color #22211f
 
 # Window colors
 set $bg-color 	         #262626
+set $active-color        #262626
 set $inactive-bg-color   #272822
 set $text-color          #f3f4f5
 set $inactive-text-color #676E7D
@@ -229,11 +230,12 @@ set $urgent-bg-color     #E53935
 set $menu-color          #20211D
 set $test-color          #852623
 
+
 # indicator #272822
 
 # window colors
 #                       border              background         text                 indicator
-client.focused          $bg-color           $bg-color          $text-color          $bg-color
+client.focused          $bg-color           $active-color      $text-color          $bg-color
 client.unfocused        $bg-color           $bg-color          $inactive-text-color $bg-color
 client.focused_inactive $bg-color           $bg-color          $inactive-text-color $bg-color
 client.urgent           $urgent-bg-color    $bg-color          $text-color          $bg-color
@@ -245,7 +247,7 @@ focus_follows_mouse no
 
 # Start compositor for x11
 # Can be used for transparency, inactive window properties etc.
-exec compton
+exec compton --shadow-exclude '!focused'
 
 # Setup for screens
 #xrandr --output DP-2 --mode 2560x1440
