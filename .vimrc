@@ -35,13 +35,13 @@ set autoread
 let g:omni_sql_no_default_maps = 1
 
 
-" This line should not be removed as it ensures that various options are
-" properly set to work with the Vim-related packages available in Debian.
+" this line should not be removed as it ensures that various options are
+" properly set to work with the vim-related packages available in debian.
 runtime! debian.vim
 
-" Uncomment the next line to make Vim more Vi-compatible
-" NOTE: debian.vim sets 'nocompatible'.  Setting 'compatible' changes numerous
-" options, so any other options should be set AFTER setting 'compatible'.
+" uncomment the next line to make vim more vi-compatible
+" note: debian.vim sets 'nocompatible'.  setting 'compatible' changes numerous
+" options, so any other options should be set after setting 'compatible'.
 "set compatible
 
 " Vim5 and later versions support syntax highlighting. Uncommenting the next
@@ -87,6 +87,7 @@ endif
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " MISC KEY MAPS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let mapleader = "\<Space>"
 map <leader>y "*y
 map <leader>a Othisisshit<ESC>
 " Move around splits with <c-hjkl>
@@ -105,9 +106,15 @@ nnoremap <leader><leader> <c-^>
 " Highlighting of search results, disable with f4, automatically turns back on
 " with what's in the nnoremap
 set hlsearch
-map <F4> :nohlsearch<CR>
+" map <F4> :nohlsearch<CR>
 map <leader>h :nohlsearch<CR>
 " nnoremap <silent><expr> <Leader>h (&hls && v:hlsearch ? ':nohls' : ':set hls')."\n"
+"
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" NUMBERS
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+set relativenumber
+set number
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -143,7 +150,7 @@ inoremap <s-tab> <c-n>
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Pasting
+" PASTING
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " When in insert mode press F2 to enable paste mode
 " Disable paste mode with F2
