@@ -89,14 +89,17 @@ endif
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 let mapleader = "\<Space>"
 map <leader>y "*y
-map <leader>a Othisisshit<ESC>
+
 " Move around splits with <c-hjkl>
 nnoremap <c-j> <c-w>j
 nnoremap <c-k> <c-w>k
 nnoremap <c-h> <c-w>h
 nnoremap <c-l> <c-w>l
-" Can't be bothered to understand ESC vs <c-c> in insert mode
+
+" Shortcut for <esc>
 imap <c-c> <esc>
+
+" Moves to the previous buffer
 nnoremap <leader><leader> <c-^>
 
 
@@ -105,11 +108,14 @@ nnoremap <leader><leader> <c-^>
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Highlighting of search results, disable with f4, automatically turns back on
 " with what's in the nnoremap
-set hlsearch
-" map <F4> :nohlsearch<CR>
-map <leader>h :nohlsearch<CR>
-" nnoremap <silent><expr> <Leader>h (&hls && v:hlsearch ? ':nohls' : ':set hls')."\n"
-"
+" set hlsearch
+" map <leader>h :nohlsearch<CR>
+":nnoremap <silent><expr> <Leader>h (&hls && v:hlsearch ? ':nohls' : ':set hls')."\n"
+
+" Press F4 to toggle highlighting on/off, and show current value.
+:nnoremap <F4> :set hlsearch! hlsearch?<CR>
+
+
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " NUMBERS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
