@@ -254,3 +254,4 @@ exec compton --shadow-exclude '!focused'
 #xrandr --output DP-0 --mode 2560x1440
 exec xrandr --output DP-2 --primary
 exec xrandr --output DP-2 --left-of DP-0
+#exec xrandr --output DP-0 --rotate left
