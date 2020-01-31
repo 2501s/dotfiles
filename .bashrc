@@ -4,13 +4,16 @@
 ### ARCH
 
 ###############################################################
-
 # If not running interactively, don't do anything
-[[ $- != *i* ]] && return
+# Alternative version: [[ $- != *i* ]] && return
+if [[ $- != *i* ]] ;then
+    return
+fi
 
 ###############################################################
 ### Command prompt
-PS1='[\u@\h \W]\$ '
+# PS1='[\u@\h \W]\$ '
+PS1="\[\033[0;33m\]\u@\h\[\033[0;34m\] \W \[\033[0;15m\]\$ \[\033[0m\]"
 
 ###############################################################
 
@@ -29,6 +32,8 @@ PS1='[\u@\h \W]\$ '
 
 export VISUAL=vim
 export EDITOR="$VISUAL"
+
+export BROWSER="firefox"
 
 ###############################################################
 ### colored man pages
@@ -63,3 +68,10 @@ source /usr/share/fzf/key-bindings.bash
 export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
 export QT_IM_MODULE=ibus
+
+###############################################################
+# Starts xorg when logging in on tty1
+if [[ "$(tty)" = "/dev/tty1" ]]; then
+	startx
+fi
+
