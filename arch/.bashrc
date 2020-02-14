@@ -13,7 +13,7 @@ fi
 ###############################################################
 ### Command prompt
 # PS1='[\u@\h \W]\$ '
-PS1="\[\033[0;33m\]\u@\h\[\033[0;34m\] \W \[\033[0;15m\]\$ \[\033[0m\]"
+PS1="\[\033[0;33m\]\u@\h\[\033[0;34m\] \W \[\033[0;32m\]\$ \[\033[0m\]"
 
 ###############################################################
 
@@ -26,6 +26,10 @@ PS1="\[\033[0;33m\]\u@\h\[\033[0;34m\] \W \[\033[0;15m\]\$ \[\033[0m\]"
 ###############################################################
 ### Vi mode in terminal
 #set -o vi
+
+###############################################################
+### PATH
+export PATH=$PATH:/home/z/scripts
 
 ###############################################################
 ### VIM default bash editor
@@ -57,6 +61,14 @@ alias grep="grep --color=auto"
 alias egrep="egrep --color=auto"
 alias fgrep="fgrep --color=auto"
 alias mpvl="mpv --loop"
+
+alias t='cd /tmp/'
+alias g='cd ~/git/'
+alias n='cd ~/notes/'
+alias s='cd ~/scripts/'
+alias gf='cd ~/git/; vim "$(fzf)"'
+alias nf='cd ~/notes/; vim "$(fzf)"'
+alias sf='cd ~/scripts/; vim "$(fzf)"'
 
 ###############################################################
 ### Fzf
