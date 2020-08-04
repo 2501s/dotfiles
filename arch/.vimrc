@@ -32,7 +32,8 @@ set winwidth=79
 set autoread
 " Stop SQL language files from doing unholy things to the C-c key
 let g:omni_sql_no_default_maps = 1
-
+" Used for opening links in firefox with gx
+let g:netrw_browsex_viewer="firefox"
 
 " this line should not be removed as it ensures that various options are
 " properly set to work with the vim-related packages available in debian.
@@ -82,6 +83,19 @@ if filereadable("/etc/vim/vimrc.local")
   source /etc/vim/vimrc.local
 endif
 
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" NETRW
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+let g:netrw_banner = 0
+" tree style presentation
+let g:netrw_liststyle = 3
+" let g:netrw_browse_split = 4
+" let g:netrw_browse_winsize = 20
+
+" adds relative numbers to netrw
+let g:netrw_bufsettings = 'noma nomod nu nobl nowrap ro'
+
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " MISC KEY MAPS
@@ -89,6 +103,11 @@ endif
 let mapleader = "\<Space>"
 map <leader>y "*y
 map <leader>o :FZF<CR>
+map <leader>g :GFiles<CR>
+map <leader>b :Buffers<CR>
+map <leader>p :! pandoc % -o /tmp/output.pdf; mupdf /tmp/output.pdf &<CR>
+map <leader>n :! pandoc % -o /tmp/output.pdf --from markdown --template eisvogel; mupdf /tmp/output.pdf &<CR>
+map <leader>m :! pandoc % -o /tmp/output.pdf --from markdown --template eisvogel --listings --toc; mupdf /tmp/output.pdf &<CR>
 
 " Move around splits with <c-hjkl>
 nnoremap <c-j> <c-w>j
@@ -98,6 +117,7 @@ nnoremap <c-l> <c-w>l
 
 " Shortcut for escaping to normal mode
 imap <c-c> <esc>
+imap <c-å> <esc>
 
 " Move to the previous buffer
 nnoremap <leader><leader> <c-^>
@@ -119,6 +139,7 @@ set nohlsearch
 " NUMBERS
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 set number
+set relativenumber
 
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
@@ -206,5 +227,10 @@ set shortmess=F
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " FZF
+" This is the default extra key bindings
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
+
+
+
+set go=c
