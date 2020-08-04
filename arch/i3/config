@@ -29,7 +29,7 @@ font pango:monospace 8
 floating_modifier $mod
 
 # start a terminal
-bindsym $mod+Return exec i3-sensible-terminal
+bindsym $mod+Return exec i3-sensible-terminal # export TERM=st
 
 # kill focused window
 bindsym $mod+Shift+q kill
@@ -90,6 +90,9 @@ bindsym $mod+a focus parent
 
 # focus the child container
 #bindsym $mod+d focus child
+#
+
+bindsym $mod+i exec ~/.vim-anywhere/bin/run
 
 set $workspace1 "1: Misc"
 set $workspace2 "2: Misc"
@@ -185,7 +188,8 @@ bar {
 }
 
 
-bindsym $mod+shift+x exec i3lock
+# bindsym $mod+shift+x exec i3lock --color=000000
+bindsym $mod+shift+x exec i3lock -i /home/z/.wallpapers/arch_logo.png -t -u
 
 # Pulse Audio controls
 bindsym $mod+Prior exec amixer -c 2 set PCM 2dB+
@@ -196,25 +200,34 @@ bindsym XF86AudioMute exec --no-startup-id pactl set-sink-mute 0 toggle # mute s
 #bindsym XF86MonBrightnessUp exec xbacklight -inc 20 # increase screen brightness
 #bindsym XF86MonBrightnessDown exec xbacklight -dec 20 # decrease screen brightness
 
-# Media player controls
-bindsym XF86AudioPlay exec playerctl play
-bindsym XF86AudioPause exec playerctl pause
-bindsym XF86AudioNext exec playerctl next
-bindsym XF86AudioPrev exec playerctl previous
+# Media player controls alt keys
+# bindsym XF86AudioPlay exec playerctl play
+# bindsym XF86AudioPause exec playerctl pause
+# bindsym XF86AudioNext exec playerctl next
+# bindsym XF86AudioPrev exec playerctl previous
+#
+bindsym $mod+u exec audio_control up
+bindsym $mod+y exec audio_control down
+bindsym $mod+m exec audio_control toggle
 
+ 
 # Border / titlebar
-default_border pixel 10
+default_border pixel 0
 
 # bindsym Control+Shift+x [class="^.*"] border toggle
 #for_window[class=terminal] border normal
+for_window[class=Gvim] floating enable
 
 # Specific setup for applications regarding borders
-for_window [class="Firefox"] border pixel 0
-for_window [class="mpv"] border pixel 0
-for_window [class="vlc"] border pixel 0
+# for_window [class="firefox"] border pixel 0
+# for_window [class="mpv"] border pixel 0
+# for_window [class="vlc"] border pixel 0
+# for_window [title="VirtualBox Manager"] border pixel 0
+for_window [title="urxvt"] border pixel 10
+for_window [title="st"] border pixel 10
 
 # Gaps
-gaps inner 20
+gaps inner 10
 
 # Bar colors
 set $bar-background-color #22211f
@@ -247,11 +260,10 @@ focus_follows_mouse no
 
 # Start compositor for x11
 # Can be used for transparency, inactive window properties etc.
-exec compton --shadow-exclude '!focused'
+exec picom --shadow-exclude '!focused'
 
 # Setup for screens
-#xrandr --output DP-2 --mode 2560x1440
-#xrandr --output DP-0 --mode 2560x1440
-exec xrandr --output DP-2 --primary
-exec xrandr --output DP-2 --left-of DP-0
-#exec xrandr --output DP-0 --rotate left
+
+# input-daemon
+exec ibus-daemon -drx
+
