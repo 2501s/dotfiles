@@ -77,13 +77,25 @@ source /usr/share/fzf/key-bindings.bash
 
 ###############################################################
 ### Input method
+
 export GTK_IM_MODULE=ibus
 export XMODIFIERS=@im=ibus
 export QT_IM_MODULE=ibus
 
 ###############################################################
+### Terminal emulator launched by i3wm
+
+export TERMINAL="st"
+
+###############################################################
 # Starts xorg when logging in on tty1
+
 if [[ "$(tty)" = "/dev/tty1" ]]; then
 	startx
 fi
+
+###############################################################
+# Bash history
+export HISTCONTROL=ignoreboth:erasedups
+
 
