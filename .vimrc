@@ -4,6 +4,7 @@
 call plug#begin('~/.vim/plugged')
 " Plug '/usr/share/fzf'
 Plug 'junegunn/fzf.vim'
+Plug 'morhetz/gruvbox'
 " markdown previewer
 "Plug 'iamcco/markdown-preview.nvim', { 'do': { -> mkdp#util#install() }, 'for': ['markdown', 'vim-plug']}
 call plug#end()
