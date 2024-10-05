@@ -1,0 +1,13 @@
+noremap <c-o> :vsc View.NavigateBackward<CR>
+noremap <c-i> :vsc View.NavigateForward<CR>
+nnoremap <C-r> :vsc Redo<CR>
+
+let mapleader = "\<space>"
+
+noremap <leader><leader> :vsc View.NavigateToLastFile<CR>
+nnoremap <leader>fs :vsc View.FullScreen<CR>
+:noremap <leader>h :set hlsearch! hlsearch?<CR>
+
+set timeoutlen=1000
+set ttimeoutlen=10
+set relativenumber
