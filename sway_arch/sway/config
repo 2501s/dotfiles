@@ -88,6 +88,36 @@ input "type:touchpad" {
 	scroll_factor 0.5
 }
 
+### Mouse 
+#
+# Basics:
+set $TBALL "1149:4128:Kensington_Expert_Mouse"
+
+
+# Turns on scrolling with the ball when right bottom button pressed.
+input $TBALL {
+      scroll_method on_button_down
+      scroll_button 274
+      rotation_angle 180.0
+}
+
+# Remapping swaps upper and bottom rows of the buttons.
+# By default buttons work this way:
+# MIDDLE    SIDE
+#      BALL
+# LEFT      RIGHT
+#
+# After remapping it could be used as:
+# LEFT      RIGHT
+#      BALL
+# MIDDLE    RIGHT
+
+bindsym --input-device="1149:4128:Kensington_Expert_Mouse" --whole-window BTN_LEFT seat seat0 cursor press BTN_MIDDLE; seat seat0 cursor release BTN_MIDDLE
+bindsym --input-device="1149:4128:Kensington_Expert_Mouse" --whole-window BTN_MIDDLE seat seat0 cursor press BTN_RIGHT; seat seat0 cursor release BTN_RIGHT
+bindsym --input-device="1149:4128:Kensington_Expert_Mouse" --whole-window BTN_SIDE seat seat0 cursor press BTN_LEFT; seat seat0 cursor release BTN_LEFT
+bindsym --input-device="1149:4128:Kensington_Expert_Mouse" --whole-window BTN_RIGHT seat seat0 cursor press BTN_SIDE; seat seat0 cursor release BTN_SIDE
+
+
 ### Key bindings
 #
 # Basics:
